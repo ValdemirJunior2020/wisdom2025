@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Wisdom X Stroke Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Wisdom X Stroke Foundation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="ebook.html">E-Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Donate to Our Cause</h2>
+        <p>Select a donation method below and support our mission.</p>
+
+        <div class="donate-section">
+            <label for="donation-method">Select a Donation Method:</label>
+            <select id="donation-method" class="donation-dropdown">
+                <option value="paypal">PayPal</option>
+                <option value="crypto">Cryptocurrency</option>
+                <option value="zelle">Zelle</option>
+            </select>
+            <button onclick="handleDonation()" class="donate-btn">Donate Now</button>
+        </div>
+    </main>
+
+    <script>
+        function handleDonation() {
+            var selectedMethod = document.getElementById("donation-method").value;
+            switch (selectedMethod) {
+                case "paypal":
+                    window.open("https://www.paypal.com/donate/?hosted_button_id=B7V5QFLMZDB2L", "_blank");
+                    break;
+                case "crypto":
+                    window.open("http://valdemirjunior.cb.id", "_blank");
+                    break;
+                case "zelle":
+                    alert("Please send your Zelle donation to: infojr.83@gmail.com");
+                    break;
+                default:
+                    alert("Please select a valid donation method.");
+            }
+        }
+    </script>
+</body>
+</html>
